@@ -10,25 +10,23 @@ public class Controlador {
     public boolean Añadir (Eetacemon e)
     {
         e.id=identificador;
-        try {
-            lista.put(identificador,e);
+
+        if(lista.put(identificador,e)==null){
             identificador++;
             return true;
         }
-        catch (Exception x){
+        else
             return false;
-        }
     }
     public boolean Borrar (Integer i)
     {
 
-        try {
-            lista.remove(i);
+        if(lista.remove(i)!=null){
+            identificador--;
             return true;
         }
-        catch (Exception x) {
+        else
             return false;
-        }
     }
     public List<Eetacemon> listar()
     {
