@@ -7,16 +7,12 @@ public class Usuario {
     private String pass;
     private String mail;
 
-    public void getnombre(String s)
-    {
-       nombre=s;
+    public Usuario(String nombre,String pass,String mail){
+        this.nombre=nombre;
+        this.pass=pass;
+        this.mail=mail;
     }
-    public void getpass(String s)
-    {
-        pass=s;
-    }
-    public void getmail(String s)
-    {
-        mail=s;
-    }
+    public String getnombre(){return nombre;}
+    public String getpass(){return pass;}
+    public String getmail(){return mail;}
 }
